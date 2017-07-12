@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ./templates/head %>
+</head>
+<body class="container">
+    <header>
+        <% include ./templates/header %>
+    </header>
+
+	 <main>
+	        <div class="row">
+	            <div class="col-sm-8">
+			        <div class="jumbotron">
+			            <small>id# <%= entryId %></small>
+			            <p>
+				            <%= characterName %>: <%= journalName %>
+				        </p>
+			            <h3><%= entryName %></h3>
+			            <p><%= entryText %></p>
+			        </div>
+	            </div>
+	            <div class="col-sm-4">
+	                <div class="well">
+	                    <h3>List of Entries</h3>
+	                    <ul>
+	                    	<li>one</li>
+	                    	<li>two</li>                    	
+	                    	<li>three</li>
+	                    	<li>four</li>
+	                    </ul>
+	                    <a href="">New Entry</a>
+	                </div>
+	            </div>
+	        </div>
+	    </main>
+    <footer>
+        <% include ./templates/footer %>
+    </footer>
+</body>
+</html>

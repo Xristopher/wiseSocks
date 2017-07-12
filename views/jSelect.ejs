@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ./templates/head %>
+</head>
+<body class="container">
+    <header>
+        <% include ./templates/header %>
+    </header>
+
+	<main>
+		<% 	if ( action === 'Alert' ) { %>
+			<div class="alert alert-danger" role="alert">
+		<% } else { %>
+			<div class="alert alert-info" role="alert">
+		<% } %>
+			<strong><%= action %></strong> <%= alertMessage %>
+		</div>
+        <div class="row">
+            <div class="col-sm-8">
+		        <div class="jumbotron">
+		        	<form>
+		        		<p>
+		        			Character Name: 
+		        			<input type="text" name="characterName"/>
+		        		</p>
+		        		<p>
+							Journal Name: 
+		        			<input type="text" name="journalName"/>
+		        		</p>
+		        		<button type="button" class="btn btn-primary btn-sm">Add Journal</button>
+						<button type="button" class="btn btn-secondary btn-sm">Cancel</button>
+		        	</form>
+		        </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="well">
+                    <h3>Available Journals</h3>
+                    <ul>
+                    	<li>one</li>
+                    	<li>two</li>                    	
+                    	<li>three</li>
+                    	<li>four</li>
+                    </ul>
+                    <a href="">New Entry</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <% include ./templates/footer %>
+    </footer>
+</body>
+</html>
